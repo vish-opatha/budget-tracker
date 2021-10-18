@@ -19,3 +19,7 @@ request.onupgradeneeded = function (e) {
     db.createObjectStore("BudgetTransactionStore", { autoIncrement: true });
   }
 };
+
+request.onerror = function (e) {
+  console.log(`Woops! ${e.target.errorCode}`);
+};
