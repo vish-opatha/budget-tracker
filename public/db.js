@@ -76,3 +76,14 @@ request.onsuccess = function (e) {
     checkDatabase();
   }
 };
+
+const saveRecord = (record) => {
+  // Create a transaction on the BudgetTransactionStore db with readwrite access
+  const transaction = db.transaction(["BudgetTransactionStore"], "readwrite");
+
+  // Access your BudgetTransactionStore object store
+  const store = transaction.objectStore("BudgetTransactionStore");
+
+  // Add record to your store with add method.
+  store.add(record);
+};
