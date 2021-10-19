@@ -68,3 +68,11 @@ function checkDatabase() {
     }
   };
 }
+
+request.onsuccess = function (e) {
+  db = e.target.result;
+
+  if (navigator.onLine) {
+    checkDatabase();
+  }
+};
