@@ -87,3 +87,5 @@ const saveRecord = (record) => {
   // Add record to your store with add method.
   store.add(record);
 };
+
+window.addEventListener("online", checkDatabase);
