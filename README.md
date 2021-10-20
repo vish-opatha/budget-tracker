@@ -23,7 +23,7 @@ This application is built using several technologies and tools. As frontend lang
 Following are the important links related to this application.
 
 - [Budget Tracker - Heroku Deployment](https://glacial-basin-20895.herokuapp.com/)
-- [Budget Tracker - Github Repo](https://github.com/vish-opatha/budget-tracker)
+- [Budget Tracker - Github Repo](https://budget-track-123.herokuapp.com/)
 
 ## Mockup
 
