@@ -4,7 +4,7 @@
 
 ## Description
 
-This project is a **Progressive Web Application (PWA)** used to track your income and expences. It works **both offline and online**. It can be used to add your various income sources and the way that you would expend them. The application presents the remaining balance, and a graph is presented with the income and expenditure of the user.
+This project is developed in a way that it can be used as a **Progressive Web Application (PWA)**. It tracks your income and expences, while working **both offline and online**. It can be used to add your various income sources and the way that you would expend them. The application presents the remaining balance, and a graph is presented with the income and expenditure of the user.
 
 This application is built using several technologies and tools. As frontend languages **HTML, CSS and Javascript** are used. Apart from that **MongoDB, Node.js, Mongoosejs as Object Document Mapping (ODM) and Express server.** Furthermore, when the application is offline, it uses **IndexDB** in order to save the transactions happened and once the the application is online and connected, it saves all the transactions to the MongoDB. This application is deployed using **MongoDB Atlas and Heroku.**
 
