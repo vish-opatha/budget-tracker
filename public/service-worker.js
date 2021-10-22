@@ -9,6 +9,7 @@ const FILES_TO_CACHE = [
   "/icons/favicon-96x96.png",
   "/icons/ms-icon-150x150.png",
   "/icons/apple-icon-60x60.png",
+  "/icons/icon-96x96.png"
 ];
 
 const CACHE_NAME = "static-cache-v2";
