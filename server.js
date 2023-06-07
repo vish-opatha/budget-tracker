@@ -1,30 +1,20 @@
-import express, { urlencoded, json } from "express";
-import logger from "morgan";
-import { connect } from "mongoose";
-import compression from "compression";
+import express from 'express';
+import { connect } from 'mongoose';
+import compression from 'compression';
+import transactionRouter from './routers/transaction.router';
 
-const PORT = process.env.PORT || 3000;
-
-const app = express();
-
-app.use(logger("dev"));
+const app = express ();
 
 app.use(compression());
-app.use(urlencoded({ extended: true }));
-app.use(json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-app.use("public");
+connect('mongodb://127.0.0.1:27017/workoutDb', { useNewUrlParser: true, useUnifiedTopology: true });
 
-connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDb", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useCreateIndex: true,
-	useFindAndModify: false,
+app.use('/api', transactionRouter);
+
+app.listen(3000, () =>{
+	console.log('server is listening to 3000');
 });
 
-// routes
-app.use(require("./routes/api.js"));
-
-app.listen(PORT, () => {
-	console.log(`App running on port ${PORT}!`);
-});
