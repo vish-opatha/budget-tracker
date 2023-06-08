@@ -10,13 +10,16 @@ This application is built using several technologies and tools. As frontend lang
 
 ## Table of Contents
 
-- [Important Links](#Important-Links)
-- [Mockup](#Mockup)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [Contribute](#Contributing)
-- [Questions](#Questions)
+- [Budget Tracker](#budget-tracker)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Important Links](#important-links)
+  - [Mockup](#mockup)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
 
 ## Important Links
 
@@ -41,10 +44,16 @@ npm install
 
 ## Usage
 
-You can run the project by cloning this project to your local machine. You need to have MongoDB Community Server installed in your local computer (Please visit [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community) for more details). To run the project locally, run the following command.
+You can run the project by cloning this project to your local machine. You need to have MongoDB Community Server installed in your local computer (Please visit [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community) for more details). To run the project locally, run the following command. Once you have installed MongoDB Server, run the following in the command prompt/terminal to start the server.
 
 ```
-node server.js
+mongod
+```
+
+After that go to the application and run the following to start the app.
+
+```
+npm run start
 ```
 
 After the above step go to the browser and access the application using localhost:3000. If you prefer to use the live or deployed version of the application, please go to the deployed link given in the 'Important Links' section.
