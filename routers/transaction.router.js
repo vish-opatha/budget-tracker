@@ -2,8 +2,8 @@ import express from 'express';
 import transaction from '../models/transaction.schema.js';
 const router = express.Router();
 
-router.post('/transaction', ({body}, res) => {
-	transaction.create(body)
+router.post('/transaction', (req, res) => {
+	transaction.create(req.body)
 		.then(dbTransaction => {
 			res.json(dbTransaction);
 		})
@@ -12,8 +12,8 @@ router.post('/transaction', ({body}, res) => {
 		});
 });
 
-router.post('/transaction/bulk', ({body}, res) => {
-	transaction.insertMany(body)
+router.post('/transaction/bulk', (req, res) => {
+	transaction.insertMany(req.body)
 		.then(dbTransaction => {
 			res.json(dbTransaction);
 		})
@@ -22,7 +22,7 @@ router.post('/transaction/bulk', ({body}, res) => {
 		});
 });
 
-router.get('/transaction', (res) => {
+router.get('/transaction', (req, res) => {
 	transaction.find({}).sort({date: -1})
 		.then(dbTransaction => {
 			res.json(dbTransaction);
