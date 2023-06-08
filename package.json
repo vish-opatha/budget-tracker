@@ -1,28 +1,33 @@
 {
   "name": "budget-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "progressive web app for budget tracking",
   "main": "server.js",
   "scripts": {
+    "start": "babel-node server.js",
+    "lint": "npx eslint .",
+    "lint-fix": "npx eslint --fix .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
+    "url": "https://github.com/vish-opatha/budget-tracker"
   },
-  "author": "",
+  "author": "Vish Opatha v.opatha@gmail.com",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
-  },
-  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
   "dependencies": {
+    "@babel/preset-env": "^7.22.4",
+    "babel-preset-env": "^1.7.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/node": "^7.22.1",
+    "eslint": "^8.42.0"
   }
 }
